@@ -1,0 +1,11 @@
+@import url("./size-styles.css");
+@import url("./font-styles.css");
+
+
+.cursor-auto {
+  cursor: auto;
+}
+
+.cursor-default {
+  cursor: default;
+}
