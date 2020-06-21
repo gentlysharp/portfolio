@@ -2,8 +2,11 @@ export default [{
     path: '/',
     name: 'App',
     component: () => import( /* webpackChunkName: "App" */ '@/apps/App.vue'),
-    children: [
-
+    children: [{
+        path: '/',
+        name: 'Home',
+        component: () => import( /* webpackChunkName: "Menu1" */ '@/views/About.vue')
+      },
       {
         path: '/about',
         name: 'About',

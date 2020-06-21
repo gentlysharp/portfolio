@@ -16,13 +16,13 @@ const _context = {
     //   path: "/"
     // },
     {
-      id: 1,
+      id: 0,
       icon: "mdi-home",
       title: "About",
       path: "/about"
     },
     {
-      id: 2,
+      id: 1,
       icon: "mdi-home",
       title: "Resume",
       path: "/resume"

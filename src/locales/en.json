@@ -1,3 +1,22 @@
 {
-  "message": "hello i18n !!"
+  "profile": {
+    "name": "Sang Hyup Han",
+    "position": "Frontend Developer",
+    "message": "Using skill is the best way to show my ability"
+  },
+  "about": {
+    "title": "#First Line",
+    "texts": [
+      "During edit my resume with a text editor, a voice from my mind asked me.. ",
+      "\"is it a proper way to showing my development skills?\"",
+      "\"wait.. but, you are a frontend developer",
+      "then, I realize that it is not the best way. ",
+      "so, what is good way to do?",
+      "was stupid question.. the answer was simple",
+      "the answer was that just make a web page with skills!",
+      "it was the starting point."
+    ]
+  }
+
+
 }

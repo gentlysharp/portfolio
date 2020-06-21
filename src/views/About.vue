@@ -3,34 +3,36 @@
     <section id="section1" class="mx-auto max-w-800">
       <v-container class="mt-12 pt-12">
         <v-card flat>
-          <v-card-title class="display-1">{{title}}</v-card-title>
+          <v-card-title class="display-1">{{$t('about.title')}}</v-card-title>
           <v-card-text>{{date}}</v-card-text>
         </v-card>
         <hr />
 
         <v-card class="my-3" flat>
-          <v-card-title class="display-1">{{intro.title}}</v-card-title>
+          <v-card-title class="display-1">{{$t('about.title')}}</v-card-title>
           <v-card-text
-            v-for="(content,i) in intro.contents"
+            v-for="(text,i) in $t('about.texts')"
             :key="i"
             class="ma-0 pa-1 pl-4"
-          >{{content}}</v-card-text>
+          >{{text}}</v-card-text>
         </v-card>
-
         <hr />
 
         <v-card class="d-flex" flat>
-          <v-spacer></v-spacer>
+          <div class="my-5 ml-3">
+            <v-avatar class size="150">
+              <img :src="avatar" alt="Han" />
+            </v-avatar>
+          </div>
 
-          <v-avatar class="ma-12" size="150">
-            <img :src="avatar" alt="Han" />
-          </v-avatar>
-          <v-card flat>
-            <v-card-text class="headline font-weight-bold mt-12 pa-0 pt-5">Sang Hyup Han</v-card-text>
-            <v-card-text class="title pa-0 mt-0">주니어지만 개발자다운 포트폴리오를 만들고 싶었습니다.</v-card-text>
-            <v-btn v-for="(s ,i) in this.$context.sns" :key="i" :href="s.href" large icon>
-              <v-icon>{{s.icon}}</v-icon>
-            </v-btn>
+          <v-card class="ml-3" flat>
+            <v-card-text class="headline mt-5 pb-0 font-weight-bold">{{$t('profile.name')}}</v-card-text>
+            <v-card-text class="title py-1">{{$t('profile.message')}}</v-card-text>
+            <div class="ml-2">
+              <v-btn v-for="(s ,i) in this.$context.sns" :key="i" :href="s.href" large icon>
+                <v-icon>{{s.icon}}</v-icon>
+              </v-btn>
+            </div>
           </v-card>
         </v-card>
       </v-container>
@@ -41,13 +43,14 @@
 <script>
 export default {
   name: "About",
+
   data: () => ({
     id: 1,
     title: "About",
     avatar: require("@/assets/images/about/about-avatar.jpg"),
     intro: {
       title: "#첫줄",
-      contents: [
+      texts: [
         `경력 기술서를 쓰다. 문득 생각이 들었다. `,
         `"프론트 엔드 개발자의 기량을 보여주기에 이런 이력서 형식이 적합한가"  `,
         `"아니.. 나 개발자인데? "`,
