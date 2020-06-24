@@ -10,7 +10,7 @@ import './plugins/aos'
 
 import './assets/css/style.css'
 import './events/EventBus'
-import './context'
+import './Context'
 
 Vue.config.productionTip = false
 

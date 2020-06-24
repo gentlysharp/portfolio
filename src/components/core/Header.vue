@@ -3,7 +3,7 @@
     <v-app-bar class="app-bar" app color="white" height="80" hide-on-scroll flat>
       <!-- icon 클릭시 left drawer true로 되면서 열림 -->
       <!-- <v-app-bar-nav-icon @click="toggleDrawer" class="d-flex d-sm-flex d-md-none" /> -->
-      <v-card flat min-width="300" @click="route('/')">
+      <v-card class="d-flex" flat min-width="300" @click="route('/')">
         <v-card-text class="headline grey--text text--darken-3 font-weight-bold">I'm Sanghyup Han</v-card-text>
       </v-card>
       <v-spacer></v-spacer>
