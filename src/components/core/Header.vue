@@ -16,6 +16,7 @@
         >{{menu.title}}</v-tab>
       </v-tabs>
 
+      <v-icon>{{weather}}</v-icon>
       <v-btn icon @click="translate">
         <v-icon>mdi-google-translate</v-icon>
       </v-btn>
@@ -32,7 +33,22 @@ export default {
   },
   components: {},
   data: () => ({
-    location: 0 // 새로고침 시 tabs가 처음 선택되는 값
+    location: 0, // 새로고침 시 tabs가 처음 선택되는 값,
+    weather: "",
+    weathers: {
+      sunney: "mdi-weather-sunney",
+      night: "mdi-weather-night",
+      rainy: "mdi-weather-rainy",
+      fog: "mdi-weather-fog",
+      windy: "mdi-weather-windy",
+      snowy: "mdi-weather-snowy",
+      pouring: "mdi-weather-pouring",
+      cloudy: "mdi-weather-cloudy",
+      nightPartlyCloudy: "mdi-weather-night-partly-cloudy",
+      lightning: "mdi-weather-lightning",
+      lightningRainy: "mdi-weather-lightning-rainy",
+      partlyCloudy: "mdi-weather-partly-cloudy"
+    }
   }),
   methods: {
     toggleDrawer() {
@@ -63,6 +79,61 @@ export default {
     this.$eventBus.$on("initTab", value => {
       this.location = value;
     });
+
+    this.$rest.api
+      .read(
+        `/api.openweathermap.org/data/2.5/weather?q=Seoul&APPID=${process.env.VUE_APP_OPEN_WEATHER_APPID}`
+      )
+      .then(res => {
+        switch (res.data.weather[1].icon) {
+          case "01d":
+            this.weather = this.weathers.sunney;
+            break;
+          case "01n":
+            this.weather = this.weathers.night;
+            break;
+          case "02d":
+            this.weather = this.weathers.partlyCloudy;
+            break;
+          case "02n":
+            this.weather = this.weathers.nightPartlyCloudy;
+            break;
+          case "03d":
+          case "03n":
+          case "04d":
+          case "04n":
+            this.weather = this.weathers.cloudy;
+            break;
+
+          case "09d":
+          case "09n":
+            this.weather = this.weathers.rainy;
+            break;
+
+          case "10d":
+          case "10n":
+            this.weather = this.weathers.pouring;
+            break;
+
+          case "11d":
+          case "11n":
+            this.weather = this.weathers.lightningRainy;
+            break;
+
+          case "13d":
+          case "13n":
+            this.weather = this.weathers.snowy;
+            break;
+
+          case "50d":
+          case "50n":
+            this.weather = this.weathers.fog;
+            break;
+
+          default:
+            this.weather = this.weathers.sunney;
+        }
+      });
   }
 };
 </script>

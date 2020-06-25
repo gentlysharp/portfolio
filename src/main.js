@@ -11,6 +11,7 @@ import './plugins/aos'
 import './assets/css/style.css'
 import './events/EventBus'
 import './Context'
+import './RESTful'
 
 Vue.config.productionTip = false
 
