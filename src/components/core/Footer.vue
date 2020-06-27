@@ -2,7 +2,7 @@
   <v-footer class="justify-center" height="100" :color="color">
     <div
       class="title font-weight-light white--text text--lighten-1 text-center"
-    >Copyright 2020. SangHyup all rights reserved.</div>
+    >Copyright 2020. SangHyup Han all rights reserved.</div>
   </v-footer>
 </template>
 

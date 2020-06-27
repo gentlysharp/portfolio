@@ -1,7 +1,7 @@
 <template>
   <div>
     <section id="section1" class="mx-auto max-w-800">
-      <v-container class="mt-12 pt-12">
+      <v-container class="mt-5">
         <v-card flat>
           <v-card-title class="display-1">{{$t('about.title')}}</v-card-title>
           <v-card-text>{{$t('about.date')}}</v-card-text>

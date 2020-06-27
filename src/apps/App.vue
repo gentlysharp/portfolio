@@ -2,7 +2,7 @@
   <v-app>
     <logo-card />
 
-    <!-- <core-navigation /> -->
+    <core-navigation />
 
     <core-header />
 
@@ -17,7 +17,7 @@ export default {
   name: "App",
   components: {
     CoreHeader: () => import("@/components/core/Header.vue"),
-    // CoreNavigation: () => import("@/components/core/Navigation"),
+    CoreNavigation: () => import("@/components/core/Navigation"),
     CoreView: () => import("@/components/core/View"),
     CoreFooter: () => import("@/components/core/Footer.vue"),
     LogoCard: () => import("@/components/card/LogoCard")

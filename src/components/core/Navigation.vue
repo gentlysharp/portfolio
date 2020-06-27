@@ -4,9 +4,11 @@
     v-model="drawer"
     :clipped="$vuetify.breakpoint.lgAndUp"
     app
+    width="100%"
   >
     <v-list dense>
       <v-list-item class="justify-center d-flex d-sm-flex d-md-none d-lg-none d-xl-none">
+        <v-card-text class="headline grey--text text--darken-3 font-weight-bold">Han's Portfolio</v-card-text>
         <img class="mb-3" :src="logo" width="180px" alt />
         <v-spacer></v-spacer>
         <v-btn icon @click="drawer = !drawer">
@@ -32,35 +34,27 @@
 <script>
 export default {
   name: "CoreNavigation",
-
-  // props: {
-  //   menus: Array
-  // },
   data: () => ({
     logo: "",
-    drawer: true,
-    menus: [
-      // 메뉴 예시
-      { id: 0, icon: "mdi-home", title: "HOME", path: "/" },
-      {
-        id: 1,
-        icon: "mdi-lightbulb-on-outline",
-        title: "Menu1"
-      }
-    ]
+    drawer: false,
+    menus: []
   }),
-  created: function() {
-    // console.log(this.$router);
 
-    // drawer가 클릭되면 발생하는 toggleDrawer 리스너를 생성한다.
-    this.$eventBus.$on("toggleDrawer", toggle => {
-      this.drawer = toggle;
-    });
-  },
   methods: {
     route(path) {
       this.$router.push({ path: path });
     }
+  },
+  created() {
+    this.menus = this.$context.menus;
+    console.log(this.menus);
+
+    // drawer가 클릭되면 발생하는 toggleDrawer 리스너를 생성한다.
+    this.$eventBus.$on("toggleDrawer", toggle => {
+      console.log("toggle");
+
+      this.drawer = toggle;
+    });
   }
 };
 </script>

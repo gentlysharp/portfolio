@@ -17,25 +17,25 @@ const _context = {
     // },
     {
       id: 0,
-      icon: "mdi-home",
+      icon: "mdi-brain",
       title: "About",
       path: "/about"
     },
     {
       id: 1,
-      icon: "mdi-home",
+      icon: "mdi-draw",
       title: "Resume",
       path: "/resume"
     },
   ],
   sns: [{
       service: "github",
-      herf: "https://github.com/gentlysharp",
+      href: "https://github.com/gentlysharp",
       icon: "mdi-github",
     },
     {
       service: "instagram",
-      herf: "https://www.instagram.com/goyang_bulls_official/?hl=ko",
+      href: "https://www.instagram.com/sanghyuphan/?hl=ko",
       icon: "mdi-instagram",
     },
 

@@ -2,9 +2,11 @@
   <div>
     <v-app-bar class="app-bar" app color="white" height="80" hide-on-scroll flat>
       <!-- icon 클릭시 left drawer true로 되면서 열림 -->
-      <!-- <v-app-bar-nav-icon @click="toggleDrawer" class="d-flex d-sm-flex d-md-none" /> -->
-      <v-card class="d-flex" flat min-width="300" @click="route('/')">
-        <v-card-text class="headline grey--text text--darken-3 font-weight-bold">I'm Sanghyup Han</v-card-text>
+      <v-app-bar-nav-icon @click="toggleDrawer" class="d-flex d-sm-flex d-md-none" />
+      <v-card class="d-flex" flat min-width="400" @click="route('/')">
+        <v-card-text
+          class="headline grey--text text--darken-3 font-weight-bold d-none d-md-flex"
+        >Han's Portfolio</v-card-text>
       </v-card>
       <v-spacer></v-spacer>
 
@@ -16,10 +18,12 @@
         >{{menu.title}}</v-tab>
       </v-tabs>
 
-      <v-icon>{{weather}}</v-icon>
-      <v-btn icon @click="translate">
+      <div class="mr-3">
+        <v-icon>{{weather}}</v-icon>
+      </div>
+      <!-- <v-btn icon @click="translate">
         <v-icon>mdi-google-translate</v-icon>
-      </v-btn>
+      </v-btn>-->
       <v-spacer></v-spacer>
     </v-app-bar>
   </div>
@@ -52,6 +56,8 @@ export default {
   }),
   methods: {
     toggleDrawer() {
+      console.log("toggle from header");
+
       this.drawer = true;
       // drawer를 여는 토글 버튼이 클릭되면 toggleDrawer 이벤트를 버스를 통해 내보낸다.
       this.$eventBus.$emit("toggleDrawer", this.drawer);
@@ -85,7 +91,7 @@ export default {
         `/api.openweathermap.org/data/2.5/weather?q=Seoul&APPID=${process.env.VUE_APP_OPEN_WEATHER_APPID}`
       )
       .then(res => {
-        switch (res.data.weather[1].icon) {
+        switch (res.data.weather[0].icon) {
           case "01d":
             this.weather = this.weathers.sunney;
             break;
