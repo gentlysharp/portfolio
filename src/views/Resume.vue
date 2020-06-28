@@ -24,16 +24,21 @@
         <v-row>
           <v-col cols="12" md="12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <v-card flat>
-              <v-card-title class="headline font-weight-bold">주식회사 도트만</v-card-title>
-              <v-card-subtitle class="title pb-0 red--text">Frontend Developer</v-card-subtitle>
-              <v-card-text class>2018.11 ~ 현재</v-card-text>
+              <v-card-title class="headline font-weight-bold">
+                <v-icon class="mr-2" color="#f04c23">mdi-office-building</v-icon>주식회사 도트만
+              </v-card-title>
+              <v-card-subtitle class="title pb-0 mx-8">Frontend Developer</v-card-subtitle>
+              <v-card-text class="mx-8">2018.11 ~ 현재</v-card-text>
             </v-card>
             <v-divider></v-divider>
           </v-col>
 
           <v-col v-for="(project,i) in projects" :key="i.project" cols="12" md="12">
             <v-card flat>
-              <v-card-title class="headline font-weight-bold">{{project.title}}</v-card-title>
+              <v-card-title class="headline font-weight-bold">
+                <v-icon class="mr-2" color="#f04c23">mdi-folder-zip-outline</v-icon>
+                {{project.title}}
+              </v-card-title>
               <v-card-subtitle class="subtitle-1">{{project.period}}</v-card-subtitle>
             </v-card>
 
@@ -79,7 +84,10 @@
             data-aos-duration="1000"
           >
             <v-card flat>
-              <v-card-title class="headline pb-5 font-weight-bold">{{skill.title}}</v-card-title>
+              <v-card-title class="headline pb-5 font-weight-bold">
+                <v-icon class="mr-2" :color="skill.color">{{skill.icon}}</v-icon>
+                {{skill.title}}
+              </v-card-title>
               <v-card-subtitle>{{skill.description}}</v-card-subtitle>
             </v-card>
             <v-divider class="mt-10"></v-divider>

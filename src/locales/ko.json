@@ -23,7 +23,8 @@
   },
 
   "resume": {
-    "projects": [{
+    "projects": [
+      {
         "title": "헬스네비 CMS 웹 클라이언트",
         "position": "프론트엔드",
         "period": "2018.10 ~ 2019.03",
@@ -77,29 +78,54 @@
         ]
       }
     ],
-    "skills": [{
+    "skills": [
+      {
         "title": "Javascript",
+        "icon": "mdi-language-javascript",
+        "color": "yellow darken-1",
         "description": "ECMAScript 2015이후 문법을 주로 사용합니다. Execution Context를 기반으로 Scope, Hoisting, Promise등 기본적인 자바스크립트 구조를 이해하고 있으며, 업무에 능숙히 사용합니다."
       },
       {
-        "title": "Html/Css",
-        "description": "DOM Tree와 CSSOM Tree 대한 기본지식을 기반으로 웹페이지 랜더링에 대해 이해를 바탕으로 사용하고 있으며, SCSS를 활용하여 Css를 사용할 수 있습니다."
+        "title": "Html 5",
+        "icon": "mdi-language-html5",
+        "color": "orange",
+        "description": "HTML 시맨틱과 DOM Tree대한 기본지식을 기반으로 웹페이지 마크업을 기술하며, meta요소와 같은 세부적인 요소들은 어떻게 동작하며 왜 만들어졌는지 생각하며 사용합니다."
+      },
+      {
+        "title": "Css 3",
+        "icon": "mdi-language-css3",
+        "color": "blue",
+        "description": " CSSOM Tree 대한 기본지식을 기반으로 웹페이지 랜더링에 대해 이해를 바탕으로 사용하고 있으며, SASS를 활용하여 Css 컴파일러를 사용할 수 있습니다."
       },
       {
         "title": "Vue JS",
+        "icon": "mdi-vuejs",
+        "color": "green",
         "description": "MVVM 디자인 패턴에서 ViewModel역할을 하는 Vue js의 본질적인 특성에 대한 이해를 바탕으로 Vue 프레임워크를 사용하며 협업을 위해 만들어진 프레임워크의 탄생 배경에 알맞는 보편화된 프로젝트 구조를 구성하여 사용합니다. "
       },
       {
         "title": "Java",
+        "icon": "mdi-language-java",
+        "color": "red",
         "description": "기초적인 자바 문법과 Spring Boot 프레임워크를 Domain Driven Design 패턴에 대해 이해와 함께 사용하며, 이를 활용하여 Entity와 Repository를 구현하여 데이터베이스와 연동하여 API를 호출하는 서버를 구현할 수 있습니다."
       },
       {
         "title": "RESTful",
+        "icon": "mdi-video-input-antenna",
+        "color": "grey",
         "description": "Axios를 활용한 RESTful API를 활용할 수 있으며, HTTP Protocol과 Methods의 활용방법을 숙지하고 있습니다."
       },
       {
+        "title": "Git",
+        "icon": "mdi-git",
+        "color": "red",
+        "description": "Git을 이용한 Version 컨트롤을 통해 프로젝트를 관리하며, Git을 통해 협업하는 것에 익숙합니다."
+      },
+      {
         "title": "Communication",
-        "description": "효율적인 업무를 위한 커뮤니케이션을 하기위해 노력합니다. 사람간의 다름을 인정하고 개성을 존중하는 대화를 하려 노력하며, 타인의 입장에서 한번 더 생각하려하는 생각의 패턴을 가지고 있습니다."
+        "icon": "mdi-hand-okay",
+        "color": "grey",
+        "description": "효율적인 업무를 위해 사람과 사람간의 커뮤니케이션은 필수적이라고 생각합니다. 다름을 인정하고 개성을 존중하며 상대가 사용하는 단어나 말투보다 본질적인 메세지가 무엇인지 파악하기 위해 집중합니다. 타인의 입장에서 한번 더 생각하려하는 사고습관을 가지고 있습니다."
       }
     ],
     "english": {
