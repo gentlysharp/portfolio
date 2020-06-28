@@ -1,13 +1,13 @@
-<template >
+<template>
   <v-navigation-drawer
-    class="left-drawer"
+    class="left-drawer d-flex d-sm-flex d-md-none d-lg-none d-xl-none"
     v-model="drawer"
     :clipped="$vuetify.breakpoint.lgAndUp"
     app
     width="100%"
   >
     <v-list dense>
-      <v-list-item class="justify-center d-flex d-sm-flex d-md-none d-lg-none d-xl-none">
+      <v-list-item class="justify-center">
         <v-card-text class="headline grey--text text--darken-3 font-weight-bold">Han's Portfolio</v-card-text>
         <img class="mb-3" :src="logo" width="180px" alt />
         <v-spacer></v-spacer>
@@ -43,16 +43,14 @@ export default {
   methods: {
     route(path) {
       this.$router.push({ path: path });
+      this.drawer = false;
     }
   },
   created() {
     this.menus = this.$context.menus;
-    console.log(this.menus);
 
     // drawer가 클릭되면 발생하는 toggleDrawer 리스너를 생성한다.
     this.$eventBus.$on("toggleDrawer", toggle => {
-      console.log("toggle");
-
       this.drawer = toggle;
     });
   }

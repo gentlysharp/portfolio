@@ -58,9 +58,8 @@ export default {
     toggleDrawer() {
       console.log("toggle from header");
 
-      this.drawer = true;
       // drawer를 여는 토글 버튼이 클릭되면 toggleDrawer 이벤트를 버스를 통해 내보낸다.
-      this.$eventBus.$emit("toggleDrawer", this.drawer);
+      this.$eventBus.$emit("toggleDrawer", true);
     },
     route(path) {
       this.$router.push({ path: path }); // routing 을 하드코딩이 아닌 프로그래밍으로 처리할 수 있다.
