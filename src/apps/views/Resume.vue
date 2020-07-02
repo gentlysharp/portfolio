@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section id="section1" class="mx-auto max-w-800">
+    <section id="resume-section1" class="mx-auto max-w-800">
       <v-container class="mt-5">
         <v-card flat>
           <v-card-title
@@ -60,7 +60,7 @@
         </v-row>
       </v-container>
     </section>
-    <section id="section2" class="mx-auto max-w-800">
+    <section id="resume-section2" class="mx-auto max-w-800">
       <v-container>
         <p class="display-3 ml-2 font-weight-bold">Skills.</p>
         <doughnut-chart
@@ -95,7 +95,7 @@
         </v-row>
       </v-container>
     </section>
-    <section id="section3" class="mx-auto max-w-800">
+    <section id="resume-section3" class="mx-auto max-w-800">
       <v-container>
         <v-card flat>
           <v-card-title class="display-3 font-weight-bold">English Skill.</v-card-title>
@@ -110,7 +110,7 @@
         <v-divider class="mt-10"></v-divider>
       </v-container>
     </section>
-    <section id="section4" class="mx-auto max-w-800">
+    <section id="resume-section4" class="mx-auto max-w-800">
       <v-container>
         <v-card flat>
           <v-card-title class="display-3 font-weight-bold">Contact.</v-card-title>
@@ -142,7 +142,7 @@ export default {
     intro: {
       titles: [`안녕하세요 :)`, `한상협 입니다.`],
       texts: [
-        "배움과 성장에 관심이 가득한 2년차 프론트엔드 주니어 개발자입니다.",
+        "2년차 프론트엔드 개발자입니다.",
         "새로운 기술에 대해 호기심이 많고, 자기개발에 큰 가치를 느낍니다.",
         "기본적인 지식들과 빠르게 발전해 나가는 기술 트렌드를 바탕으로 새련된 코드를 구성할 방법에 대해 연구합니다."
       ]
@@ -176,4 +176,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+</style>

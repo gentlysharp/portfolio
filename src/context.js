@@ -24,9 +24,16 @@ const _context = {
     {
       id: 1,
       icon: "mdi-draw",
+      title: "Blog",
+      path: "/blog"
+    },
+    {
+      id: 2,
+      icon: "mdi-account-circle",
       title: "Resume",
       path: "/resume"
     },
+
   ],
   sns: [{
       service: "github",

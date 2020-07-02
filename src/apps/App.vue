@@ -9,6 +9,8 @@
     <core-view />
 
     <core-footer />
+
+    <go-top-btn />
   </v-app>
 </template>
 
@@ -20,7 +22,8 @@ export default {
     CoreNavigation: () => import("@/components/core/Navigation"),
     CoreView: () => import("@/components/core/View"),
     CoreFooter: () => import("@/components/core/Footer.vue"),
-    LogoCard: () => import("@/components/card/LogoCard")
+    LogoCard: () => import("@/components/card/LogoCard"),
+    GoTopBtn: () => import("@/components/button/GoTopBtn")
   },
   methods: {
     initTab() {
